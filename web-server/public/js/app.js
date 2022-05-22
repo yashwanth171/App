@@ -9,11 +9,12 @@ const messageTwo = document.querySelector('#message-2')
 weatherform.addEventListener('submit',(e) => {
     e.preventDefault()
     const location = search.value
+    console.log(weatherform, search, document)
     const messageOne = 'Loading'
     const messageTwo = ''
     console.log(messageOne,messageTwo)
     //console.log(search.value)
-    fetch('http://localhost:3001/weather?address='+location).then(response => response.json()).then(data => {
+    fetch('http://localhost:3001/weather?address='+location).then(response => {response.json(); console.log(response)}).catch(data => {
             if (data.error){
                 messageOne.textContent = data.error
                 console.log(data.error)
