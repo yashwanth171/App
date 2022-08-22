@@ -13,6 +13,6 @@
     "document": "^0.4.7",
     "express": "^4.18.1",
     "request": "^2.88.2",
-    "require": "^0.4.4"
+    "require": "^0.4.9"
   }
 }
